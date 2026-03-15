@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>传统中国风文化 · 以山水为骨 以水墨为魂</title>
+  <meta name="description" content="以山水为骨，以水墨为魂，以诗词为文化底蕴。每一屏对应一首诗，每一次交互都是一次文化邂逅。">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+</head>
+<body class="season-spring">
+  <!-- 背景动态景物：春樱 / 夏荷叶·竹叶 / 秋枫叶 / 冬雪花 -->
+  <div class="bg-scenery" aria-hidden="true">
+    <span class="bg-scenery-item"></span>
+    <span class="bg-scenery-item"></span>
+    <span class="bg-scenery-item"></span>
+    <span class="bg-scenery-item"></span>
+    <span class="bg-scenery-item"></span>
+    <span class="bg-scenery-item"></span>
+    <span class="bg-scenery-item"></span>
+    <span class="bg-scenery-item"></span>
+    <span class="bg-scenery-item"></span>
+    <span class="bg-scenery-item"></span>
+    <span class="bg-scenery-item"></span>
+    <span class="bg-scenery-item"></span>
+    <span class="bg-scenery-item"></span>
+    <span class="bg-scenery-item"></span>
+    <span class="bg-scenery-item"></span>
+    <span class="bg-scenery-item"></span>
+    <span class="bg-scenery-item"></span>
+    <span class="bg-scenery-item"></span>
+    <span class="bg-scenery-item"></span>
+    <span class="bg-scenery-item"></span>
+    <span class="bg-scenery-item"></span>
+    <span class="bg-scenery-item"></span>
+    <span class="bg-scenery-item"></span>
+    <span class="bg-scenery-item"></span>
+    <span class="bg-scenery-item"></span>
+    <span class="bg-scenery-item"></span>
+    <span class="bg-scenery-item"></span>
+    <span class="bg-scenery-item"></span>
+    <span class="bg-scenery-item"></span>
+    <span class="bg-scenery-item"></span>
+    <span class="bg-scenery-item"></span>
+    <span class="bg-scenery-item"></span>
+    <span class="bg-scenery-item"></span>
+    <span class="bg-scenery-item"></span>
+    <span class="bg-scenery-item"></span>
+    <span class="bg-scenery-item"></span>
+    <span class="bg-scenery-item"></span>
+    <span class="bg-scenery-item"></span>
+    <span class="bg-scenery-item"></span>
+    <span class="bg-scenery-item"></span>
+  </div>
+  <!-- 顶部：印章 + 站名 + 时令同赏 -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="seal" aria-hidden="true">赏</div>
+      <h1 class="site-title">传统中国风文化</h1>
+      <p class="site-tagline">时令同赏</p>
+      <nav class="main-nav" aria-label="主导航">
+        <ul class="nav-list">
+          <li><a href="#hero" class="nav-item">首页</a></li>
+          <li><a href="#culture-cards" class="nav-item">文化</a></li>
+          <li><a href="#poetry" class="nav-item">诗词</a></li>
+          <li><a href="#seasons" class="nav-item">四季</a></li>
+        </ul>
+        <button type="button" class="nav-toggle" aria-label="打开菜单" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero：远山淡影 -->
+    <section id="hero" class="hero">
+      <div class="hero-watermark" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="hero-poem">以山水为骨，以水墨为魂，以诗词为文化底蕴。</p>
+        <p class="hero-desc">每一屏对应一首诗，每一次交互都是一次文化邂逅。</p>
+      </div>
+    </section>
+
+    <!-- 四季切换区 -->
+    <section id="seasons" class="seasons-section" aria-labelledby="seasons-heading">
+      <h2 id="seasons-heading" class="section-title">四季轮转</h2>
+      <div class="seasons-controls">
+        <button type="button" class="season-btn active" data-season="spring" aria-label="切换至春季氛围">春</button>
+        <button type="button" class="season-btn" data-season="summer" aria-label="切换至夏季氛围">夏</button>
+        <button type="button" class="season-btn" data-season="autumn" aria-label="切换至秋季氛围">秋</button>
+        <button type="button" class="season-btn" data-season="winter" aria-label="切换至冬季氛围">冬</button>
+      </div>
+      <div class="season-audio-controls">
+        <button type="button" class="audio-btn" id="toggleAmbient" aria-label="播放或暂停环境音">环境音</button>
+      </div>
+      <div id="particles-container" class="particles-container" aria-hidden="true"></div>
+      <p class="season-hint" aria-live="polite">当前：春 · 樱花与鸟鸣</p>
+    </section>
+
+    <!-- 文化卡片区：3D 翻转 -->
+    <section id="culture-cards" class="culture-section" aria-labelledby="culture-heading">
+      <h2 id="culture-heading" class="section-title">文化模块</h2>
+      <div class="cards-grid">
+        <article class="card-container">
+          <div class="card" tabindex="0" role="button" aria-label="翻转卡片查看茶文化">
+            <div class="card-front">
+              <div class="card-icon" aria-hidden="true">茶</div>
+              <h3 class="card-title">茶道</h3>
+            </div>
+            <div class="card-back">
+              <h3 class="card-title">茶道</h3>
+              <p class="card-detail">细嚼花须味亦长，新芽一粟叶间藏。—— 陆游</p>
+              <button type="button" class="read-aloud-btn" aria-label="朗读此诗">朗读</button>
+            </div>
+          </div>
+        </article>
+        <article class="card-container">
+          <div class="card" tabindex="0" role="button" aria-label="翻转卡片查看书法文化">
+            <div class="card-front">
+              <div class="card-icon" aria-hidden="true">书</div>
+              <h3 class="card-title">书法</h3>
+            </div>
+            <div class="card-back">
+              <h3 class="card-title">书法</h3>
+              <p class="card-detail">飘若浮云，矫若惊龙。—— 世说新语</p>
+              <button type="button" class="read-aloud-btn" aria-label="朗读此诗">朗读</button>
+            </div>
+          </div>
+        </article>
+        <article class="card-container">
+          <div class="card" tabindex="0" role="button" aria-label="翻转卡片查看山水文化">
+            <div class="card-front">
+              <div class="card-icon" aria-hidden="true">山</div>
+              <h3 class="card-title">山水</h3>
+            </div>
+            <div class="card-back">
+              <h3 class="card-title">山水</h3>
+              <p class="card-detail">空山新雨后，天气晚来秋。—— 王维</p>
+              <button type="button" class="read-aloud-btn" aria-label="朗读此诗">朗读</button>
+            </div>
+          </div>
+        </article>
+        <article class="card-container">
+          <div class="card" tabindex="0" role="button" aria-label="翻转卡片查看梅兰竹菊">
+            <div class="card-front">
+              <div class="card-icon" aria-hidden="true">梅</div>
+              <h3 class="card-title">四君子</h3>
+            </div>
+            <div class="card-back">
+              <h3 class="card-title">梅兰竹菊</h3>
+              <p class="card-detail">梅须逊雪三分白，雪却输梅一段香。—— 卢梅坡</p>
+              <button type="button" class="read-aloud-btn" aria-label="朗读此诗">朗读</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 诗词展示区 -->
+    <section id="poetry" class="poetry-section" aria-labelledby="poetry-heading">
+      <h2 id="poetry-heading" class="section-title">今日诗句</h2>
+      <div class="poetry-card">
+        <p class="poetry-text">细嚼花须味亦长，新芽一粟叶间藏。</p>
+        <p class="poetry-author">—— 陆游</p>
+        <button type="button" class="read-aloud-btn poetry-read" aria-label="朗读今日诗句">朗读诗句</button>
+      </div>
+      <p class="poetry-welcome" id="welcome-msg" aria-live="polite"></p>
+    </section>
+
+    <!-- 书法体验区（毛笔笔迹） -->
+    <section class="calligraphy-section" aria-labelledby="calligraphy-heading">
+      <h2 id="calligraphy-heading" class="section-title">墨迹</h2>
+      <div class="calligraphy-wrap">
+        <canvas id="ink-canvas" width="400" height="200" aria-label="毛笔书写区域，可拖动鼠标留下墨迹"></canvas>
+        <div class="calligraphy-actions">
+          <button type="button" id="clear-ink" aria-label="清除墨迹">清除</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <button type="button" class="back-to-top" aria-label="返回页面顶部">返回顶部</button>
+    <p class="copyright">© 传统中国风文化 · 仅供学习展示</p>
+    <nav class="footer-nav" aria-label="页脚链接">
+      <a href="#hero">首页</a>
+      <a href="#culture-cards">文化</a>
+      <a href="#poetry">诗词</a>
+    </nav>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
